@@ -15,6 +15,6 @@ class Jobs(models.Model):
 class HiredEmployees(models.Model):
     id = models.IntegerField(primary_key=True)
     name = models.TextField(null=True)
-    datetime = models.DateTimeField(null=True)
+    datetime = models.TextField(null=True)
     department_id = models.ForeignKey(Departments, on_delete=models.CASCADE)
     job_id = models.ForeignKey(Jobs, on_delete=models.CASCADE)
